@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110018907-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-110018907-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>TAO TAJIMA | Filmmaker</title>
+    <meta name="description" content="A director and film maker with the Tokyo visual design studio Tangram.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TAO TAJIMA | Filmmaker">
+    <meta property="og:site_name" content="TAO TAJIMA | Filmmaker">
+    <meta property="og:image" content="images/share/share.png">
+    <meta property="og:url" content="http://localhost/SiteB/">
+    <meta property="og:description" content="A director and film maker with the Tokyo visual design studio Tangram.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="images/share/share.png">
+
+    <!-- Favicons (comente se estiver vazio) -->
+    <!--
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    -->
+
+    <!-- Styles -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Scripts Head -->
+    <script src="js/lib-head.pack.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="header" class="header slash">
+            <a id="header_home" class="header_home" href="#home">
+                <div class="underline">TAO TAJIM<span class="termination">A</span></div>
+            </a>
+            <a id="header_about" class="header_about" href="#about">
+                <div class="header_about_container">
+                    <span class="header_about_text">About</span>
+                    <span class="header_about_arrow"><svg viewBox="0 0 45 7"><polyline points="0,7 45,7 24,0 24,6 0,6"></polyline></svg></span>
+                </div>
+            </a>
+        </div>
+
+        <div id="sns" class="sns slash">
+            <a class="underline" href="https://www.facebook.com/tao.tajima" target="_blank" rel="noopener">
+                <div>faceboo<span class="termination">k</span></div>
+            </a>
+            <a class="underline" href="https://vimeo.com/user5856788" target="_blank" rel="noopener">
+                <div>vime<span class="termination">o</span></div>
+            </a>
+        </div>
+
+        <div class="menuTrigger">
+            <a id="menuTrigger_open" class="menuTrigger_open hover" href="#works">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <a id="menuTrigger_close" class="menuTrigger_close hover" href="#">
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <canvas id="three" class="three"></canvas>
+        
+        <!-- Seção Home -->
+        <section id="home" class="slideHome">
+            <h1 class="slideHome_container">
+                <span class="slideHome_position">Filmmaker</span>
+                <span class="slideHome_name">TA<span class="slideHome_termination">O</span><br> TAJIM<span class="termination">A</span></span>
+                <span class="slideHome_from">from<br> TANGRAM co.ltd.</span>
+            </h1>
+        </section>
+
+        <!-- Seção Trabalhos -->
+        <section id="works" class="list">
+            <ul>
+                <li class="list_item">
+                    <a href="#project-MN">
+                        <div class="list_num"><span>019</span></div>
+                        <div class="list_thumb"><img alt="MN concept movie" src="images/list/MN.jpg"></div>
+                        <h2 class="list_title"><span>MN concept movie</span></h2>
+                    </a>
+                </li>
+                <!-- Adicione os outros 18 itens seguindo o padrão -->
+            </ul>
+        </section>
+
+        <!-- Seção About -->
+        <section id="about">
+            <!-- Conteúdo about -->
+        </section>
+    </main>
+
+    <footer>
+        <div id="backToTop" class="backToTop">
+            <a href="#home"><span></span></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/lib-body.pack.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
