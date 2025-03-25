@@ -1,46 +1,222 @@
+/* Variáveis */
 :root {
-    --golden-ratio: 1.618;
-    --easing: cubic-bezier(0.77, 0, 0.175, 1);
-  }
-  
-  /* Sistema de Tipografia */
-  body {
-    font-family: 'Noto Sans JP', -apple-system, sans-serif;
-    font-size: calc(14px + 0.3vw);
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    line-height: var(--golden-ratio);
-    color: #000;
-    background: #fff;
-  }
-  
-  /* Navegação Primária */
-  .primary-nav {
+    --black: #000;
+    --white: #fff;
+    --gray: #e0e0e0;
+    --transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Reset e Base */
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background: var(--black);
+    color: var(--black);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Overlay de Transição */
+.transition-overlay {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 2.618rem;
+    height: 100%;
+    background: var(--black);
+    z-index: 999;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 100;
-  }
-  
-  /* Container de Projetos */
-  .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(38.2%, 1fr));
-    gap: 1px;
-    margin-top: 9.02rem;
-  }
-  
-  /* Efeito Hover Avançado */
-  .project-link:hover .preview {
+    mix-blend-mode: difference;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    position: relative;
+}
+
+.logo::after {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    color: var(--black);
+    transition: width var(--transition);
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+/* Menu Hamburguer */
+.menu-toggle {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 101;
+    cursor: pointer;
+}
+
+.menu-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+.menu-line:nth-child(1) {
+    top: 0;
+}
+
+.menu-line:nth-child(2) {
+    bottom: 0;
+}
+
+.menu-toggle.active .menu-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.active .menu-line:nth-child(2) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 99;
     opacity: 0;
-    transform: scale(0.98);
-  }
-  
-  .project-link:hover video {
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+}
+
+.menu-overlay.active {
     opacity: 1;
-    transform: scale(1.02);
-  }
-  
+    visibility: visible;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.nav-link {
+    font-size: 3rem;
+    color: var(--white);
+    display: inline-block;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.nav-link::after {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    color: var(--gray);
+    transition: width var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Grid de Projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 8rem 2rem;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.project-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter var(--transition), transform var(--transition);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.project-info {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    opacity: 0;
+    transition: all var(--transition);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-category {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}
+
+.project:hover .project-image {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.project:hover .project-overlay {
+    opacity: 1;
+}
+
+.project:hover .project-info {
+    bottom: 0;
+    opacity: 1;
+}
