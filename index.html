@@ -9,19 +9,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Overlay Preto (Transições) -->
+    <div class="cursor-circle"></div>
     <div class="transition-overlay"></div>
 
-    <!-- Cabeçalho -->
     <header class="header">
-        <a href="/" class="logo" data-hover="BELLA PRINCESS">TAO TAJIMA</a>
+        <a href="/" class="logo" data-hover="TAO TAJIMA">TAO TAJIMA</a>
         <div class="menu-toggle">
             <span class="menu-line"></span>
             <span class="menu-line"></span>
         </div>
     </header>
 
-    <!-- Menu Overlay -->
     <div class="menu-overlay">
         <nav class="nav">
             <ul>
@@ -32,45 +30,26 @@
         </nav>
     </div>
 
-    <!-- Conteúdo Principal -->
     <main class="main-content">
-        <section class="projects-grid">
-            <!-- Projeto 1 -->
-            <a href="/assets/images/projetos/bikini pink 001.mp4" class="project" data-category="Commercial">
-                <div class="project-image-wrapper">
-                    <img src="assets/images/list/b228c6d1-3660-4504-bbde-8848b08d4136.png" alt="FUTURE FOOD TALK" class="project-image">
-                    <div class="project-overlay"></div>
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">FUTURE FOOD TALK</h3>
-                    <p class="project-category">Commercial</p>
-                </div>
-            </a>
-
-            <!-- Projeto 2 -->
-            <a href="/assets/images/projetos/bikini pink 002.mp4" class="project" data-category="SEXY">
-                <div class="project-image-wrapper">
-                    <img src="assets/images/list/b228c6d1-3660-4504-bbde-8848b08d4136.png" alt="BELLA BUNNY" class="project-image">
-                    <div class="project-overlay"></div>
-                </div>
-                <div class="project-info">
-                    <h3 class="project-title">BELLA BUNNY</h3>
-                    <p class="project-category">SEXY</p>
-                </div>
-            </a>
-
-            <!-- Adicione os outros 5 projetos aqui -->
+        <section class="projects-wheel">
+            <div class="wheel-container">
+                <a href="works/projeto1.html" class="project-wheel-item" data-angle="0">
+                    <img src="assets/images/thumbnails/projeto1-thumb.jpg" alt="Projeto 1">
+                </a>
+                <a href="works/projeto2.html" class="project-wheel-item" data-angle="60">
+                    <img src="assets/images/thumbnails/projeto2-thumb.jpg" alt="Projeto 2">
+                </a>
+                <!-- Adicione mais itens com ângulos múltiplos de 60 -->
+            </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer class="footer">
-        <p>© <span id="year"></span> BELLA BUNNY</p>
+        <p>© <span id="year"></span> TAO TAJIMA</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="assets/js/wheel-navigation.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
