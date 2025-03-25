@@ -1,39 +1,76 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TAO TAJIMA | Portfólio Profissional</title>
-  <link rel="stylesheet" href="assets/css/main.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAO TAJIMA | Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <nav class="primary-nav">
-    <a href="/" class="logo" data-split="TAO TAJIMA">TAO TAJIMA</a>
-    <div class="nav-links">
-      <a href="/works" data-split="Works">Works</a>
-      <a href="/about" data-split="About">About</a>
+    <!-- Overlay Preto (Transições) -->
+    <div class="transition-overlay"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <a href="/" class="logo" data-hover="TAO TAJIMA">TAO TAJIMA</a>
+        <div class="menu-toggle">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </div>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay">
+        <nav class="nav">
+            <ul>
+                <li><a href="/works" class="nav-link" data-hover="TRABALHOS">TRABALHOS</a></li>
+                <li><a href="/about" class="nav-link" data-hover="SOBRE">SOBRE</a></li>
+                <li><a href="/contact" class="nav-link" data-hover="CONTATO">CONTATO</a></li>
+            </ul>
+        </nav>
     </div>
-  </nav>
 
-  <main class="project-container">
-    <!-- Projeto 01 -->
-    <article class="project" data-id="01">
-      <a href="/project/01" class="project-link">
-        <div class="media-container">
-          <img src="assets/media/01-thumb.jpg" alt="" class="preview" 
-               loading="eager" width="1600" height="900">
-          <video src="assets/media/01-preview.mp4" 
-                 muted loop playsinline preload="metadata"></video>
-        </div>
-        <div class="project-meta">
-          <span class="project-number">01</span>
-          <h2 class="project-title">Título do Projeto</h2>
-        </div>
-      </a>
-    </article>
-    <!-- Repetir estrutura para outros projetos -->
-  </main>
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <section class="projects-grid">
+            <!-- Projeto 1 -->
+            <a href="/assets/images/projetos/bellassecrestsssxx-001.mp4" class="project" data-category="Commercial">
+                <div class="project-image-wrapper">
+                    <img src="assets/images/projetos/bellassecrestsssxx-001.mp4" alt="FUTURE FOOD TALK" class="project-image">
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">FUTURE FOOD TALK</h3>
+                    <p class="project-category">Commercial</p>
+                </div>
+            </a>
 
-  <script src="assets/js/main.js" type="module"></script>
+            <!-- Projeto 2 -->
+            <a href="/assets/images/projetos/bellassecrestsssxx-002.mp4" class="project" data-category="Commercial">
+                <div class="project-image-wrapper">
+                    <img src="assets/images/list/asa-dan.jpg" alt="FUTURE FOOD TALK" class="project-image">
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">FUTURE FOOD TALK</h3>
+                    <p class="project-category">Commercial</p>
+                </div>
+            </a>
+
+            <!-- Adicione os outros 5 projetos aqui -->
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© <span id="year"></span> TAO TAJIMA</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
