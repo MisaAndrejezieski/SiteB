@@ -7529,3 +7529,17 @@
     t.ThreeListItem = u
 }
 ]);
+
+// Animação de scroll para as imagens
+gsap.utils.toArray(".project").forEach((project) => {
+    gsap.from(project.querySelector(".project-image"), {
+        y: 50,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: project,
+            start: "top 80%",
+            toggleActions: "play none none none"
+        },
+        duration: 1
+    });
+});
