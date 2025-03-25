@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAO TAJIMA | Portfólio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAO TAJIMA | Portfólio Profissional</title>
+  <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 <body>
-    <!-- Header Minimalista -->
-    <header class="header">
-        <a href="/" class="logo">TAO TAJIMA</a>
-    </header>
+  <nav class="primary-nav">
+    <a href="/" class="logo" data-split="TAO TAJIMA">TAO TAJIMA</a>
+    <div class="nav-links">
+      <a href="/works" data-split="Works">Works</a>
+      <a href="/about" data-split="About">About</a>
+    </div>
+  </nav>
 
-    <!-- Grid de Projetos -->
-    <main class="projects-grid">
-        <a href="works/projeto1.html" class="project">
-            <div class="project-media">
-                <img src="assets/images/thumb1.jpg" alt="Projeto 1" loading="lazy">
-            </div>
-            <h3 class="project-title">Projeto 1</h3>
-        </a>
-        
-        <a href="works/projeto2.html" class="project">
-            <div class="project-media">
-                <img src="assets/images/thumb2.jpg" alt="Projeto 2" loading="lazy">
-            </div>
-            <h3 class="project-title">Projeto 2</h3>
-        </a>
-    </main>
+  <main class="project-container">
+    <!-- Projeto 01 -->
+    <article class="project" data-id="01">
+      <a href="/project/01" class="project-link">
+        <div class="media-container">
+          <img src="assets/media/01-thumb.jpg" alt="" class="preview" 
+               loading="eager" width="1600" height="900">
+          <video src="assets/media/01-preview.mp4" 
+                 muted loop playsinline preload="metadata"></video>
+        </div>
+        <div class="project-meta">
+          <span class="project-number">01</span>
+          <h2 class="project-title">Título do Projeto</h2>
+        </div>
+      </a>
+    </article>
+    <!-- Repetir estrutura para outros projetos -->
+  </main>
 
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
 </body>
 </html>
