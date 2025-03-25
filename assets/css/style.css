@@ -81,3 +81,14 @@ body {
     max-width: 90%;
     max-height: 90%;
 }
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-media {
+        height: 70vh;
+    }
+}
+
